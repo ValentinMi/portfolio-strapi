@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "skills",
+  "collectionName": "experiences",
   "info": {
-    "name": "Skill"
+    "name": "Experience"
   },
   "options": {
     "increments": true,
@@ -11,24 +11,34 @@
   "attributes": {
     "title": {
       "type": "string",
-      "unique": true,
       "required": true
     },
-    "icon": {
-      "collection": "file",
+    "description": {
+      "type": "text"
+    },
+    "logo": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"
       ],
       "plugin": "upload",
+      "required": false
+    },
+    "job": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
-      "required": true
+    "startYear": {
+      "type": "integer"
     },
-    "pro": {
-      "type": "boolean"
+    "endYear": {
+      "type": "integer"
     }
   }
 }
+
+
